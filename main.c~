@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+
+
+#define SHSIZE 100
+
+int main(int argc, char *argv[])
+{
+    int j, k;
+    int y[10][10];
+	
+	for (j=0; j<10; j= j+1)
+		{
+		for (k=0; k<10; k= k+1)
+		{
+			y[j][k]=0;
+		}		
+	}
+	printf("hello\n");
+
+	int i;
+	int space = 0;
+	y[5][5] = 1;
+
+	printf(" \n");
+
+	for (j=0; j<10; j= j+1)
+	{
+		for (k=0; k<10; k= k+1){
+			//printf("%d ", y[j][k]);
+			if (y[j][k] == 0)
+				printf(". ");	//empty
+			else if (y[j][k] == 1)
+				printf("F "); 	//fish
+			else if (y[j][k] == 2)
+				printf("0 "); 	//pellet
+			space++;
+			if (space ==10){
+				printf(" \n");
+				space = 0;
+			}
+
+		}
+	}
+printf(" \n");
+return 0;
+
+
+}
