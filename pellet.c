@@ -47,7 +47,6 @@ void create()
    *grid[0][pellet] = 2; //writes 2 on the array
 }
 
-
 void drop()
 {
   int q, w;

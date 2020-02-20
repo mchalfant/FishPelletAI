@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
    if (Pfish < 0)
    {
-	   perror("fork failed).");
+	   perror("fork failed.");
 	   exit(0);
    }
    else if (Pfish == 0)
